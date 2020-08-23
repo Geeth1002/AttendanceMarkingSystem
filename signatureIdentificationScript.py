@@ -17,7 +17,7 @@ mycursor.execute("use attendance")
 #import pytesseract
 pytesseract.pytesseract.tesseract_cmd=r"C:\\Program Files\\Tesseract\\tesseract.exe";
 
-#Load image
+#Load image Files
 x=input("Enter the day");
 img=cv2.imread('1.png')
 if(x==1):
