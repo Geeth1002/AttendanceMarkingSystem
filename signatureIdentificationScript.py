@@ -12,13 +12,29 @@ from PIL.ImageOps import grayscale
 mydb= mysql.connector.connect(host="localhost", user="root",passwd="");
 mycursor=mydb.cursor()
 mycursor.execute("use attendance")
-mycursor.execute("ALTER TABLE `attend` ADD `day1` VARCHAR(50) NOT NULL AFTER `name`;")
+#mycursor.execute("ALTER TABLE `attend` ADD `day1` VARCHAR(50) NOT NULL AFTER `name`;")
 
 #import pytesseract
 pytesseract.pytesseract.tesseract_cmd=r"C:\\Program Files\\Tesseract\\tesseract.exe";
 
 #Load image
-img=cv2.imread('2.png');
+x=input("Enter the day");
+img=cv2.imread('1.png')
+if(x==1):
+    img=cv2.imread('1.png');
+    mycursor.execute("ALTER TABLE `attend` ADD `day1` VARCHAR(50) NOT NULL AFTER `name`;")
+if(x==2):
+    img=cv2.imread('2.png')
+    mycursor.execute("ALTER TABLE `attend` ADD `day2` VARCHAR(50) NOT NULL AFTER `name`;")
+if(x==3):
+    img=cv2.imread('3.png')
+    mycursor.execute("ALTER TABLE `attend` ADD `day3` VARCHAR(50) NOT NULL AFTER `name`;")
+if(x==4):
+    img=cv2.imread('4.png')
+    mycursor.execute("ALTER TABLE `attend` ADD `day4` VARCHAR(50) NOT NULL AFTER `name`;")
+if(x==5):
+    img=cv2.imread('5.png')
+    mycursor.execute("ALTER TABLE `attend` ADD `day5` VARCHAR(50) NOT NULL AFTER `name`;")
 
     #First Iteration
 #Crop Image and get index number
@@ -148,7 +164,7 @@ print(id)
 print(status)
 
 mycursor.execute("UPDATE attend set day1=%s where id=%s",(status,id));
-
+#gggg
 
 
 #cv2.imshow('Result',blackAndWhiteImage);
