@@ -25,16 +25,16 @@ if(x==1):
     mycursor.execute("ALTER TABLE `attend` ADD `day1` VARCHAR(50) NOT NULL AFTER `name`;")
 if(x==2):
     img=cv2.imread('2.png')
-    mycursor.execute("ALTER TABLE `attend` ADD `day2` VARCHAR(50) NOT NULL AFTER `name`;")
+    mycursor.execute("ALTER TABLE `attend` ADD `day2` VARCHAR(50) NOT NULL AFTER `day1`;")
 if(x==3):
     img=cv2.imread('3.png')
-    mycursor.execute("ALTER TABLE `attend` ADD `day3` VARCHAR(50) NOT NULL AFTER `name`;")
+    mycursor.execute("ALTER TABLE `attend` ADD `day3` VARCHAR(50) NOT NULL AFTER `day2`;")
 if(x==4):
     img=cv2.imread('4.png')
-    mycursor.execute("ALTER TABLE `attend` ADD `day4` VARCHAR(50) NOT NULL AFTER `name`;")
+    mycursor.execute("ALTER TABLE `attend` ADD `day4` VARCHAR(50) NOT NULL AFTER `day3`;")
 if(x==5):
     img=cv2.imread('5.png')
-    mycursor.execute("ALTER TABLE `attend` ADD `day5` VARCHAR(50) NOT NULL AFTER `name`;")
+    mycursor.execute("ALTER TABLE `attend` ADD `day5` VARCHAR(50) NOT NULL AFTER `day4`;")
 
     #First Iteration
 #Crop Image and get index number
