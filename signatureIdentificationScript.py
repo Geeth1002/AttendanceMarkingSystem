@@ -15,7 +15,7 @@ mycursor.execute("use attendance")
 mycursor.execute("ALTER TABLE `attend` ADD `day1` VARCHAR(50) NOT NULL AFTER `name`;")
 
 #import pytesseract
-pytesseract.pytesseract.tesseract_cmd=r"C:\\ProgramData\\tesseract\\tesseract.exe";
+pytesseract.pytesseract.tesseract_cmd=r"C:\\Program Files\\Tesseract\\tesseract.exe";
 
 #Load image
 img=cv2.imread('2.png');
