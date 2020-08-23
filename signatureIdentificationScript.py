@@ -12,7 +12,7 @@ from PIL.ImageOps import grayscale
 mydb= mysql.connector.connect(host="localhost", user="root",passwd="");
 mycursor=mydb.cursor()
 mycursor.execute("use attendance")
-mycursor.execute("ALTER TABLE `attend` ADD `day1` VARCHAR(50) NOT NULL AFTER `name`;")
+#mycursor.execute("ALTER TABLE `attend` ADD `day1` VARCHAR(50) NOT NULL AFTER `name`;")
 
 #import pytesseract
 pytesseract.pytesseract.tesseract_cmd=r"C:\\Program Files\\Tesseract\\tesseract.exe";
