@@ -23,7 +23,7 @@ x = int(input("Enter the day : "));
 if (x == 1):
     img = cv2.imread('1.png')
     query = 'UPDATE attend set day1=%s where id=%s'
-    #mycursor.execute("ALTER TABLE `attend` ADD `day1` VARCHAR(50) NOT NULL AFTER `name`;")
+    mycursor.execute("ALTER TABLE `attend` ADD `day1` VARCHAR(50) NOT NULL AFTER `name`;")
 if (x == 2):
     img = cv2.imread('2.png')
     query = 'UPDATE attend set day2=%s where id=%s'
