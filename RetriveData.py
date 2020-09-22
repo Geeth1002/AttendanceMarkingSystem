@@ -29,12 +29,12 @@ d = arr[3]*20
 e = arr[4]*20
 f = arr[5]*20
 
-print("10000409 : " + str(a))
-print("10009301 : " + str(b))
-print("10009302 : " + str(c))
-print("10009303 : " + str(d))
-print("10009304 : " + str(e))
-print("10009306 : " + str(f))
+print("10000409 : " + str(a)+"%")
+print("10009301 : " + str(b)+"%")
+print("10009302 : " + str(c)+"%")
+print("10009303 : " + str(d)+"%")
+print("10009304 : " + str(e)+"%")
+print("10009306 : " + str(f)+"%")
 
 
 #Student 1
