@@ -19,8 +19,8 @@ for row in myresult :
             y=y+1
     arr.append(y)
     y=0
-print(arr)
-print (arrname)
+print('\nAttendance Presentage : \n')
+# print(arr)
 
 a = arr[0]*20
 b = arr[1]*20
@@ -29,12 +29,20 @@ d = arr[3]*20
 e = arr[4]*20
 f = arr[5]*20
 
+print("10000409 : " + str(a))
+print("10009301 : " + str(b))
+print("10009302 : " + str(c))
+print("10009303 : " + str(d))
+print("10009304 : " + str(e))
+print("10009306 : " + str(f))
+
+
 #Student 1
 labels = 'Present', 'Absent'
 sizes = [a,100-a]
 explode = (0.1, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
 
-fig0, ax1 = plt.subplots()
+fig1, ax1 = plt.subplots()
 ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
@@ -58,7 +66,7 @@ labels = 'Present', 'Absent'
 sizes = [c,100-c]
 explode = (0.1, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
 
-fig2, ax1 = plt.subplots()
+fig1, ax1 = plt.subplots()
 ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
@@ -70,7 +78,7 @@ labels = 'Present', 'Absent'
 sizes = [d,100-d]
 explode = (0.1, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
 
-fig3, ax1 = plt.subplots()
+fig1, ax1 = plt.subplots()
 ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
@@ -83,7 +91,7 @@ labels = 'Present', 'Absent'
 sizes = [e,100-e]
 explode = (0.1, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
 
-fig4, ax1 = plt.subplots()
+fig1, ax1 = plt.subplots()
 ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
@@ -95,7 +103,7 @@ labels = 'Present', 'Absent'
 sizes = [f,100-f]
 explode = (0.1, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
 
-fig5, ax1 = plt.subplots()
+fig1, ax1 = plt.subplots()
 ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
         shadow=True, startangle=90)
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
