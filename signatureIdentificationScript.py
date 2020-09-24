@@ -100,7 +100,7 @@ cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
-print(whitepix);
+# print(whitepix);
 if (whitepix > 100):
     status = str("present")
 else:
@@ -132,7 +132,7 @@ cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
-print(whitepix);
+# print(whitepix);
 if (whitepix > 100):
     status = str("present")
 else:
@@ -164,7 +164,7 @@ cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
-print(whitepix);
+# print(whitepix);
 if (whitepix > 100):
     status = str("present")
 else:
@@ -196,7 +196,7 @@ cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
-print(whitepix);
+# print(whitepix);
 if (whitepix > 100):
     status = str("present")
 else:
@@ -228,7 +228,7 @@ cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
-print(whitepix);
+# print(whitepix);
 if (whitepix > 100):
     status = str("present")
 else:
