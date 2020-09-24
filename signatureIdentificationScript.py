@@ -5,7 +5,7 @@ import pytesseract
 import mysql.connector
 import imutils
 import numpy
-
+#1
 # Create Database Connection
 from PIL.ImageOps import grayscale
 
