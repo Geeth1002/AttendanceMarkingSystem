@@ -48,8 +48,11 @@ y = 275
 w = 120
 h = 20
 cropImg1 = img[y:y + h, x:x + w]
+cv2.imshow("Segmentation",cropImg1)
 img1 = cv2.cvtColor(cropImg1, cv2.COLOR_BGR2RGB);
+cv2.imshow("BGR to RGB",img1)
 image = imutils.resize(img1, width=612, height=800)
+cv2.imshow("Resacle Image",image)
 id = (pytesseract.image_to_string(image));
 id = id.strip()
 status = str("absence")
@@ -60,8 +63,11 @@ sigy = 275
 sigw = 135
 sigh = 20
 cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
+cv2.imshow("Segmentation Signature")
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
+cv2.imshow("Gray Scale",grayImage1)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
+cv2.imshow("black & white",blackAndWhiteImage)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
 # print(whitepix);
 if (whitepix > 100):
