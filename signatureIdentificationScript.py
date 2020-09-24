@@ -12,7 +12,6 @@ from PIL.ImageOps import grayscale
 mydb = mysql.connector.connect(host="localhost", user="root", passwd="");
 mycursor = mydb.cursor()
 mycursor.execute("use attendance")
-# mycursor.execute("ALTER TABLE `attend` ADD `day1` VARCHAR(50) NOT NULL AFTER `name`;")
 
 # import pytesseract
 pytesseract.pytesseract.tesseract_cmd = r"C:\\Program Files\\Tesseract\\tesseract.exe";
@@ -55,7 +54,7 @@ image = imutils.resize(img1, width=612, height=800)
 cv2.imshow("Resacle Image",image)
 id = (pytesseract.image_to_string(image));
 id = id.strip()
-status = str("absence")
+
 
 # crop image and get Signature
 sigx = 530
@@ -101,7 +100,7 @@ cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
-# print(whitepix);
+print(whitepix);
 if (whitepix > 100):
     status = str("present")
 else:
@@ -133,7 +132,7 @@ cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
-# print(whitepix);
+print(whitepix);
 if (whitepix > 100):
     status = str("present")
 else:
@@ -165,7 +164,7 @@ cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
-# print(whitepix);
+print(whitepix);
 if (whitepix > 100):
     status = str("present")
 else:
@@ -197,7 +196,7 @@ cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
-# print(whitepix);
+print(whitepix);
 if (whitepix > 100):
     status = str("present")
 else:
@@ -229,7 +228,7 @@ cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
-# print(whitepix);
+print(whitepix);
 if (whitepix > 100):
     status = str("present")
 else:
