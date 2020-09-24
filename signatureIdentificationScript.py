@@ -5,7 +5,7 @@ import pytesseract
 import mysql.connector
 import imutils
 import numpy
-#aaa
+
 # Create Database Connection
 from PIL.ImageOps import grayscale
 
@@ -63,9 +63,10 @@ sigy = 275
 sigw = 135
 sigh = 20
 cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
-cv2.imshow("Segmentation Signature")
+cv2.imshow("Segmentation Signature",cropSigImg)
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
-cv2.imshow("Gray Scale",grayImage1)
+cv2.imshow("Grays Scale",grayImage1)
+
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
 cv2.imshow("black & white",blackAndWhiteImage)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
@@ -239,5 +240,5 @@ print(status)
 # mycursor.execute("UPDATE attend set day1=%s where id=%s",(status,id));
 mycursor.execute(query, (status, id));
 
-# cv2.imshow('Result',blackAndWhiteImage);
-# cv2.waitKey(0);
+cv2.imshow('Result',blackAndWhiteImage);
+cv2.waitKey(0);
