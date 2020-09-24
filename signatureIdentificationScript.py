@@ -5,7 +5,7 @@ import pytesseract
 import mysql.connector
 import imutils
 import numpy
-#1
+
 # Create Database Connection
 from PIL.ImageOps import grayscale
 
@@ -47,13 +47,14 @@ y = 275
 w = 120
 h = 20
 cropImg1 = img[y:y + h, x:x + w]
-cv2.imshow("Segmentation",cropImg1)
+
 img1 = cv2.cvtColor(cropImg1, cv2.COLOR_BGR2RGB);
-cv2.imshow("BGR to RGB",img1)
 image = imutils.resize(img1, width=612, height=800)
-cv2.imshow("Resacle Image",image)
 id = (pytesseract.image_to_string(image));
 id = id.strip()
+cv2.imshow("Segmentation",cropImg1)
+cv2.imshow("BGR to RGB",img1)
+cv2.imshow("Resacle Image",image)
 
 
 # crop image and get Signature
@@ -65,8 +66,9 @@ cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 cv2.imshow("Segmentation Signature",cropSigImg)
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 cv2.imshow("Grays Scale",grayImage1)
-
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
+cv2.imshow("Segmentation Signature",cropSigImg)
+cv2.imshow("Grays Scale",grayImage1)
 cv2.imshow("black & white",blackAndWhiteImage)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
 # print(whitepix);
@@ -90,6 +92,9 @@ img1 = cv2.cvtColor(cropImg1, cv2.COLOR_BGR2RGB);
 image = imutils.resize(img1, width=612, height=800)
 id = (pytesseract.image_to_string(image));
 id = id.strip()
+cv2.imshow("Segmentation",cropImg1)
+cv2.imshow("BGR to RGB",img1)
+cv2.imshow("Resacle Image",image)
 
 # crop image and get signature
 sigx = 530
@@ -99,6 +104,9 @@ sigh = 20
 cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
+cv2.imshow("Segmentation Signature",cropSigImg)
+cv2.imshow("Grays Scale",grayImage1)
+cv2.imshow("black & white",blackAndWhiteImage)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
 # print(whitepix);
 if (whitepix > 100):
@@ -108,7 +116,6 @@ else:
 print(id)
 print(status)
 
-# mycursor.execute("UPDATE attend set day1=%s where id=%s",(status,id));
 mycursor.execute(query, (status, id));
 
 # Third Iteration
@@ -122,6 +129,9 @@ img1 = cv2.cvtColor(cropImg1, cv2.COLOR_BGR2RGB);
 image = imutils.resize(img1, width=612, height=800)
 id = (pytesseract.image_to_string(image));
 id = id.strip()
+cv2.imshow("Segmentation",cropImg1)
+cv2.imshow("BGR to RGB",img1)
+cv2.imshow("Resacle Image",image)
 
 # crop image and get signature
 sigx = 530
@@ -131,6 +141,9 @@ sigh = 20
 cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
+cv2.imshow("Segmentation Signature",cropSigImg)
+cv2.imshow("Grays Scale",grayImage1)
+cv2.imshow("black & white",blackAndWhiteImage)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
 # print(whitepix);
 if (whitepix > 100):
@@ -140,7 +153,6 @@ else:
 print(id)
 print(status)
 
-# mycursor.execute("UPDATE attend set day1=%s where id=%s",(status,id));
 mycursor.execute(query, (status, id));
 
 # Fourth Iteration
@@ -154,6 +166,9 @@ img1 = cv2.cvtColor(cropImg1, cv2.COLOR_BGR2RGB);
 image = imutils.resize(img1, width=612, height=800)
 id = (pytesseract.image_to_string(image));
 id = id.strip()
+cv2.imshow("Segmentation",cropImg1)
+cv2.imshow("BGR to RGB",img1)
+cv2.imshow("Resacle Image",image)
 
 # crop image and get signature
 sigx = 530
@@ -163,6 +178,9 @@ sigh = 20
 cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
+cv2.imshow("Segmentation Signature",cropSigImg)
+cv2.imshow("Grays Scale",grayImage1)
+cv2.imshow("black & white",blackAndWhiteImage)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
 # print(whitepix);
 if (whitepix > 100):
@@ -172,7 +190,6 @@ else:
 print(id)
 print(status)
 
-# mycursor.execute("UPDATE attend set day1=%s where id=%s",(status,id));
 mycursor.execute(query, (status, id));
 
 # Fifth Iteration
@@ -186,6 +203,9 @@ img1 = cv2.cvtColor(cropImg1, cv2.COLOR_BGR2RGB);
 image = imutils.resize(img1, width=612, height=800)
 id = (pytesseract.image_to_string(image));
 id = id.strip()
+cv2.imshow("Segmentation",cropImg1)
+cv2.imshow("BGR to RGB",img1)
+cv2.imshow("Resacle Image",image)
 
 # crop image and get signature
 sigx = 530
@@ -195,6 +215,9 @@ sigh = 20
 cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
+cv2.imshow("Segmentation Signature",cropSigImg)
+cv2.imshow("Grays Scale",grayImage1)
+cv2.imshow("black & white",blackAndWhiteImage)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
 # print(whitepix);
 if (whitepix > 100):
@@ -204,7 +227,6 @@ else:
 print(id)
 print(status)
 
-# mycursor.execute("UPDATE attend set day1=%s where id=%s",(status,id));
 mycursor.execute(query, (status, id));
 
 # sixth Iteration
@@ -214,10 +236,13 @@ y = 409
 w = 120
 h = 20
 cropImg1 = img[y:y + h, x:x + w]
-img1 = cv2.cvtColor(cropImg1, cv2.COLOR_BGR2RGB);
+img1 = cv2.cvtColor(cropImg1, cv2.COLOR_BGR2RGB)
 image = imutils.resize(img1, width=612, height=800)
 id = (pytesseract.image_to_string(image));
 id = id.strip()
+cv2.imshow("Segmentation",cropImg1)
+cv2.imshow("BGR to RGB",img1)
+cv2.imshow("Resacle Image",image)
 
 # crop image and get signature
 sigx = 530
@@ -227,6 +252,9 @@ sigh = 20
 cropSigImg = img[sigy:sigy + sigh, sigx:sigx + sigw]
 grayImage1 = cv2.cvtColor(cropSigImg, cv2.COLOR_BGR2GRAY)
 (thresh, blackAndWhiteImage) = cv2.threshold(grayImage1, 127, 255, cv2.THRESH_BINARY)
+cv2.imshow("Segmentation Signature",cropSigImg)
+cv2.imshow("Grays Scale",grayImage1)
+cv2.imshow("black & white",blackAndWhiteImage)
 whitepix = numpy.sum(blackAndWhiteImage == 0)
 # print(whitepix);
 if (whitepix > 100):
@@ -236,7 +264,6 @@ else:
 print(id)
 print(status)
 
-# mycursor.execute("UPDATE attend set day1=%s where id=%s",(status,id));
 mycursor.execute(query, (status, id));
 
 cv2.imshow('Result',blackAndWhiteImage);
